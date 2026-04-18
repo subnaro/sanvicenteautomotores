@@ -14,7 +14,7 @@
 
 .entregas-head h2{
   margin: 0 0 4px;
-  font-size: 22px; /* más chico que modelos */
+  font-size: 22px;
   font-weight: 800;
   color: #111;
 }
@@ -25,104 +25,95 @@
   color: #7a7a7a;
 }
 
-/* BOTONES */
+/* ocultamos flechas porque ahora es automático */
 .entregas-controls{
-  display: flex;
-  gap: 8px;
+  display: none;
 }
 
-.entregas-btn{
-  width: 36px;
-  height: 36px;
-  border: 1px solid #d8d8d8;
-  background: #fff;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  transition: 0.2s;
+/* ocultamos dots porque ya no hacen falta */
+.entregas-dots{
+  display: none;
 }
 
-.entregas-btn:hover{
-  background:#f1f6ff;
-}
-
-/* CAROUSEL */
 .entregas-carousel-wrapper{
   overflow: hidden;
+  width: 100%;
 }
 
 .entregas-carousel-track{
   display: flex;
   gap: 14px;
-  transition: transform 0.4s ease;
+  width: max-content;
+  will-change: transform;
 }
 
-/* 🔥 ACÁ ESTÁ LA CLAVE */
 .entrega-card{
-  flex: 0 0 calc((100% - 56px) / 5); /* 5 cards → más chicas */
-  background:#fff;
+  flex: 0 0 220px;
+  width: 220px;
+  background: #fff;
   border-radius: 14px;
-  overflow:hidden;
-  border:1px solid #ececec;
+  overflow: hidden;
+  border: 1px solid #ececec;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* IMAGEN MÁS BAJA */
 .entrega-img{
-  width:100%;
-  height:120px; /* antes 190 → ahora más chico */
-  object-fit:cover;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  display: block;
 }
 
-/* TEXTO MÁS SUTIL */
 .entrega-texto{
-  padding:10px;
-  font-size:12px;
-  color:#888;
-  text-align:center;
+  padding: 10px 10px 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #888;
+  text-align: center;
+  min-height: 48px;
 }
 
-/* DOTS */
-.entregas-dots{
-  display:flex;
-  justify-content:center;
-  gap:6px;
-  margin-top:14px;
-}
-
-.entregas-dots .dot{
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:#d0d0d0;
-}
-
-.entregas-dots .dot.active{
-  background:#d4b24c;
-}
-
-/* RESPONSIVE */
-@media (max-width:1024px){
+/* tablet */
+@media (max-width: 1024px){
   .entrega-card{
-    flex: 0 0 calc((100% - 28px) / 3);
-  }
-}
-
-@media (max-width:768px){
-  .entrega-card{
-    flex: 0 0 calc((100% - 14px) / 2);
+    flex: 0 0 200px;
+    width: 200px;
   }
 
   .entrega-img{
-    height:140px;
+    height: 112px;
   }
 }
 
-@media (max-width:480px){
+/* mobile */
+@media (max-width: 768px){
+  .entregas-section{
+    padding: 26px 0 18px;
+  }
+
+  .entregas-head{
+    margin-bottom: 14px;
+  }
+
+  .entregas-head h2{
+    font-size: 20px;
+  }
+
+  .entregas-head p{
+    font-size: 12px;
+  }
+
   .entrega-card{
-    flex: 0 0 100%;
+    flex: 0 0 170px;
+    width: 170px;
+  }
+
+  .entrega-img{
+    height: 100px;
+  }
+
+  .entrega-texto{
+    font-size: 11px;
+    min-height: 44px;
   }
 }
