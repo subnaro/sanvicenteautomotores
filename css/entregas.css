@@ -1,0 +1,158 @@
+.entregas-section{
+  padding: 34px 0 26px;
+  background: #f8f8f8;
+  border-top: 1px solid #ececec;
+}
+
+.entregas-head{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.entregas-head h2{
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: 0.2px;
+}
+
+.entregas-head p{
+  margin: 0;
+  font-size: 14px;
+  color: #7a7a7a;
+}
+
+.entregas-controls{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.entregas-btn{
+  width: 42px;
+  height: 42px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  color: #222;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.entregas-btn:hover{
+  background: #f1f6ff;
+  border-color: #bcd3ff;
+  color: #0d47c9;
+  transform: translateY(-1px);
+}
+
+.entregas-carousel-wrapper{
+  overflow: hidden;
+  width: 100%;
+}
+
+.entregas-carousel-track{
+  display: flex;
+  gap: 18px;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.entrega-card{
+  flex: 0 0 calc((100% - 36px) / 3);
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  padding-bottom: 14px;
+}
+
+.entrega-img{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.entrega-texto{
+  margin: 12px 14px 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #888;
+  font-weight: 500;
+}
+
+.entregas-dots{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.entregas-dots .dot{
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d0d0d0;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.entregas-dots .dot.active{
+  background: #d4b24c;
+  transform: scale(1.15);
+}
+
+@media (max-width: 1024px){
+  .entrega-card{
+    flex: 0 0 calc((100% - 18px) / 2);
+  }
+
+  .entrega-img{
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px){
+  .entregas-section{
+    padding: 28px 0 20px;
+  }
+
+  .entregas-head{
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+
+  .entregas-head h2{
+    font-size: 24px;
+  }
+
+  .entregas-controls{
+    align-self: flex-end;
+  }
+
+  .entrega-card{
+    flex: 0 0 100%;
+  }
+
+  .entrega-img{
+    height: 210px;
+  }
+
+  .entrega-texto{
+    font-size: 12.5px;
+  }
+}
