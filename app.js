@@ -79,17 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function getCardWidth() {
-    const firstCard = track.querySelector(".model-card");
-    if (!firstCard) return 0;
-
-    const cardStyle = window.getComputedStyle(firstCard);
-    const cardWidth = firstCard.offsetWidth;
-    const marginRight = parseFloat(cardStyle.marginRight) || 0;
-
-    return cardWidth + marginRight;
-  }
-
   function getVisibleCards() {
     const screenWidth = window.innerWidth;
 
@@ -150,13 +139,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function startAutoSlide() {
+    stopAutoSlide();
     autoSlide = setInterval(() => {
       nextSlide();
     }, 3500);
   }
 
   function stopAutoSlide() {
-    clearInterval(autoSlide);
+    if (autoSlide) {
+      clearInterval(autoSlide);
+    }
   }
 
   function restartAutoSlide() {
@@ -183,10 +175,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  track.addEventListener("mouseenter", stopAutoSlide);
-  track.addEventListener("mouseleave", startAutoSlide);
-
   window.addEventListener("resize", () => {
     updateCarousel();
+    restartAutoSlide();
   });
 });

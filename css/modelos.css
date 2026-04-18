@@ -206,3 +206,6 @@
     font-size: 13px;
   }
 }
+.carousel-controls {
+  display: none;
+}
