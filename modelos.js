@@ -25,20 +25,20 @@ window.MODELOS = [
   },
   {
     imagen: "modelos/modelo5.png",
-    nombre: "Renault Kangoo",
+    nombre: "Renault Kangoo 5A Express",
     desde: "$18.600.000",
     mensaje: "Hola, quiero consultar por el Renault Kangoo."
   },
   {
     imagen: "modelos/modelo6.png",
-    nombre: "Renault Duster",
-    desde: "$22.400.000",
-    mensaje: "Hola, quiero consultar por el Renault Duster."
+    nombre: "Renault Boreal",
+    desde: "$38.400.000",
+    mensaje: "Hola, quiero consultar por el Renault Boreal."
   },
   {
     imagen: "modelos/modelo7.png",
-    nombre: "Renault Alaskan",
-    desde: "$29.900.000",
-    mensaje: "Hola, quiero consultar por la Renault Alaskan."
+    nombre: "Fiat Strada Freedom",
+    desde: "$15.300.000",
+    mensaje: "Hola, quiero consultar por el Fiat Strada."
   }
 ];
