@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ? modelo.mensaje
         : `Hola, quiero consultar por ${modelo.nombre}.`;
 
-    return `https://wa.me/541160584396?text=${encodeURIComponent(mensajeBase)}`;
+    return `https://wa.me/541121701235?text=${encodeURIComponent(mensajeBase)}`;
   }
 
   function renderCards() {
