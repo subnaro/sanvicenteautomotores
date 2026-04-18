@@ -6,9 +6,60 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
 
-  const cards = Array.from(track.querySelectorAll(".entrega-card"));
-  if (!cards.length) return;
+  const entregas = [
+    {
+      imagen: "entregas/entrega1.png",
+      texto: "Entrega realizada con éxito."
+    },
+    {
+      imagen: "entregas/entrega2.png",
+      texto: "Cliente feliz con su nuevo auto."
+    },
+    {
+      imagen: "entregas/entrega3.png",
+      texto: "Otro sueño cumplido."
+    },
+    {
+      imagen: "entregas/entrega4.png",
+      texto: "Gracias por confiar en nosotros."
+    },
+    {
+      imagen: "entregas/entrega5.png",
+      texto: "Seguimos entregando oportunidades."
+    },
+    {
+      imagen: "entregas/entrega6.png",
+      texto: "Salio otra entrega."
+    },
+    {
+      imagen: "entregas/entrega7.png",
+      texto: "Meta alcanzada."
+    },
+    {
+      imagen: "entregas/entrega8.png",
+      texto: "Disfruta tu nuevo Polo."
+    }
+  ];
 
+  function renderEntregas() {
+    track.innerHTML = "";
+
+    entregas.forEach((entrega) => {
+      const card = document.createElement("article");
+      card.className = "entrega-card";
+
+      card.innerHTML = `
+        <img src="${entrega.imagen}" alt="Entrega" class="entrega-img">
+        <p class="entrega-texto">${entrega.texto}</p>
+      `;
+
+      track.appendChild(card);
+    });
+  }
+
+  renderEntregas();
+
+  let cards = Array.from(track.querySelectorAll(".entrega-card"));
   let currentIndex = 0;
   let cardsPerView = getCardsPerView();
   let maxIndex = Math.max(0, cards.length - cardsPerView);
@@ -24,19 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return parseInt(styles.gap) || 0;
   }
 
-  function updateSizes() {
-    cardsPerView = getCardsPerView();
-    maxIndex = Math.max(0, cards.length - cardsPerView);
-
-    if (currentIndex > maxIndex) {
-      currentIndex = maxIndex;
-    }
-
-    updateCarousel();
-    createDots();
-    updateDots();
-  }
-
   function updateCarousel() {
     const firstCard = cards[0];
     if (!firstCard) return;
@@ -50,14 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function createDots() {
     dotsContainer.innerHTML = "";
-
     const totalPages = Math.max(1, cards.length - cardsPerView + 1);
 
     for (let i = 0; i < totalPages; i++) {
       const dot = document.createElement("button");
       dot.className = "dot";
       dot.type = "button";
-      dot.setAttribute("aria-label", `Ir a la entrega ${i + 1}`);
 
       dot.addEventListener("click", () => {
         currentIndex = i;
@@ -76,12 +112,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function updateSizes() {
+    cardsPerView = getCardsPerView();
+    maxIndex = Math.max(0, cards.length - cardsPerView);
+
+    if (currentIndex > maxIndex) {
+      currentIndex = maxIndex;
+    }
+
+    updateCarousel();
+    createDots();
+    updateDots();
+  }
+
   nextBtn.addEventListener("click", () => {
     if (currentIndex >= maxIndex) {
       currentIndex = 0;
     } else {
       currentIndex++;
     }
+
     updateCarousel();
     updateDots();
   });
@@ -92,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       currentIndex--;
     }
+
     updateCarousel();
     updateDots();
   });
