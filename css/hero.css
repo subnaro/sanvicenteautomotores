@@ -136,7 +136,6 @@
   animation: heroFadeUp 0.9s ease-out 0.45s both;
 }
 
-/* 🔥 BOTONES MEJORADOS */
 .hero .btn{
   display: inline-flex;
   align-items: center;
@@ -175,25 +174,13 @@
 
 /* ===== ANIMACIONES ===== */
 @keyframes heroCardIn{
-  from{
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from{ opacity: 0; transform: translateY(18px); }
+  to{ opacity: 1; transform: translateY(0); }
 }
 
 @keyframes heroFadeUp{
-  from{
-    opacity: 0;
-    transform: translateY(14px);
-  }
-  to{
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from{ opacity: 0; transform: translateY(14px); }
+  to{ opacity: 1; transform: translateY(0); }
 }
 
 @keyframes heroImageZoom{
@@ -207,31 +194,73 @@
   100%{ opacity: 0.6; }
 }
 
-/* ===== MOBILE ===== */
+/* ===== MOBILE (ARREGLADO) ===== */
 @media (max-width: 768px){
   .hero{
-    height: 520px;
+    height: 430px;
     border-radius: 18px;
+    margin-top: 14px;
+  }
+
+  .hero-bg{
+    object-position: center;
+  }
+
+  .hero::before{
+    background:
+      linear-gradient(
+        180deg,
+        rgba(4, 10, 22, 0.78) 0%,
+        rgba(5, 12, 26, 0.48) 50%,
+        rgba(6, 14, 28, 0.18) 100%
+      );
   }
 
   .hero-content{
-    top: 28px;
-    left: 16px;
-    right: 16px;
-    padding: 24px 20px 22px 36px;
+    top: 18px;
+    left: 14px;
+    right: 14px;
+    max-width: none;
+    padding: 18px 16px 18px 30px;
+    border-radius: 18px;
+  }
+
+  .hero-content::before{
+    top: 18px;
+    bottom: 18px;
+    left: 14px;
+  }
+
+  .hero-content::after{
+    border-radius: 18px;
   }
 
   .hero-content h1{
-    font-size: 40px;
+    margin: 0 0 12px;
+    font-size: 30px;
+    line-height: 0.98;
+    letter-spacing: -1px;
+  }
+
+  .hero-content h1::before{
+    margin-bottom: 10px;
+    font-size: 9px;
+    letter-spacing: 2px;
   }
 
   .hero-content p{
-    font-size: 16px;
+    margin: 0 0 18px;
+    font-size: 14px;
+  }
+
+  .hero-actions{
+    gap: 10px;
   }
 
   .hero .btn{
-    min-width: 140px;
-    height: 48px;
-    font-size: 14px;
+    min-width: calc(50% - 5px);
+    height: 44px;
+    padding: 0 14px;
+    font-size: 13px;
   }
 }
