@@ -203,7 +203,7 @@
   }
 
   .hero-bg{
-    object-position: center;
+    object-position: center 10%;
   }
 
   .hero::before{
