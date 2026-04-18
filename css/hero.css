@@ -197,7 +197,7 @@
 /* ===== MOBILE (ARREGLADO) ===== */
 @media (max-width: 768px){
   .hero{
-    height: 360px;
+    height: 320px;
     border-radius: 18px;
     margin-top: 14px;
   }
