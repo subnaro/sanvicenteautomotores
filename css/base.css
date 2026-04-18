@@ -1,0 +1,75 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --bg: #f7f7f7;
+  --white: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --line: #e7e7e7;
+
+  --yellow: #e6c64b;
+  --yellow-hover: #d8b83f;
+
+  --green: #57b85e;
+  --green-hover: #49a550;
+
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 10px 28px rgba(0, 0, 0, 0.08);
+
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+
+  --container: 1160px;
+}
+
+/* =========================
+   BASE
+========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   WRAPPER
+========================= */
+.site-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--white);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  width: min(var(--container), calc(100% - 56px));
+  margin: 0 auto;
+}

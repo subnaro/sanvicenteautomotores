@@ -1,0 +1,38 @@
+🔹 ¿Qué va en cada uno?
+
+base.css
+
+reset (*)
+body
+container
+variables (:root)
+tipografía general
+
+header.css
+
+todo lo del menú superior
+logo
+navegación
+botón teléfono
+
+hero.css
+
+banner principal
+título
+botones principales
+
+modelos.css
+
+cards de autos
+carrusel
+botones de autos
+
+info.css
+
+“Quiénes somos”
+“Tomamos tu usado”
+“Financiación”
+
+footer.css
+
+footer completo
