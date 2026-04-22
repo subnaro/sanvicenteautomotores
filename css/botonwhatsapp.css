@@ -21,14 +21,17 @@
   box-shadow: 0 14px 30px rgba(0,0,0,0.3);
 }
 
-/* Icono */
+/* ICONO (corregido) */
 .whatsapp-icon{
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   fill: white;
+  display: block;
+  flex-shrink: 0;
+  transform: translateY(1px); /* ajuste fino */
 }
 
-/* Texto */
+/* TEXTO */
 .whatsapp-float::after{
   content: "Escribinos";
   color: white;
@@ -48,7 +51,7 @@
   100%{ transform: scale(1); }
 }
 
-/* Mobile (solo icono para no molestar) */
+/* Mobile */
 @media (max-width: 768px){
   .whatsapp-float{
     width: 56px;
@@ -64,5 +67,6 @@
   .whatsapp-icon{
     width: 26px;
     height: 26px;
+    transform: none;
   }
 }
