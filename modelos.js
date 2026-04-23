@@ -2,7 +2,7 @@ window.MODELOS = [
   {
     imagen: "modelos/modelo1.png",
     nombre: "Renault Kwid",
-    desde: "$12.500.000",
+    desde: "$8.500.000",
     mensaje: "Hola, quiero consultar por el Renault Kwid."
   },
   {
@@ -13,15 +13,15 @@ window.MODELOS = [
   },
   {
     imagen: "modelos/modelo3.png",
-    nombre: "Fiat Cronos",
-    desde: "$15.800.000",
+    nombre: "Fiat Cronos adjudicado",
+    desde: "$13.870.000",
     mensaje: "Hola, quiero consultar por el Fiat Cronos."
   },
   {
     imagen: "modelos/modelo4.png",
-    nombre: "Renault Stepway",
+    nombre: "Renault Oroch",
     desde: "$17.200.000",
-    mensaje: "Hola, quiero consultar por el Renault Stepway."
+    mensaje: "Hola, quiero consultar por el Renault Oroch."
   },
   {
     imagen: "modelos/modelo5.png",
@@ -37,8 +37,8 @@ window.MODELOS = [
   },
   {
     imagen: "modelos/modelo7.png",
-    nombre: "Fiat Strada Freedom",
+    nombre: "Fiat Fiorino 0km",
     desde: "$15.300.000",
-    mensaje: "Hola, quiero consultar por el Fiat Strada."
+    mensaje: "Hola, quiero consultar por el Fiat Fiorino."
   }
 ];
