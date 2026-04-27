@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { imagen: "entregas/entrega8.png", texto: "Disfruta tu nuevo Polo." }
   ];
 
-  // 🔹 Render original
   function renderEntregas() {
     track.innerHTML = "";
 
@@ -32,18 +31,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderEntregas();
 
-  // 🔥 DUPLICAMOS PARA EFECTO INFINITO
   const clone = track.innerHTML;
   track.innerHTML += clone;
 
   let scrollAmount = 0;
-  let speed = 0.3; // velocidad (más bajo = más lento)
+  let speed = 0.3; 
 
   function autoScroll() {
     scrollAmount += speed;
     track.style.transform = `translateX(-${scrollAmount}px)`;
 
-    // cuando pasa la mitad → resetea sin que se note
     if (scrollAmount >= track.scrollWidth / 2) {
       scrollAmount = 0;
     }
@@ -53,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   autoScroll();
 
-  // 🔹 pausa cuando el mouse está arriba
   track.addEventListener("mouseenter", () => {
     speed = 0;
   });

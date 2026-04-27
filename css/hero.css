@@ -1,4 +1,3 @@
-/* ===== HERO BASE ===== */
 .hero{
   position: relative;
   width: 100%;
@@ -10,7 +9,6 @@
   box-shadow: 0 24px 60px rgba(8, 16, 29, 0.18);
 }
 
-/* ===== IMAGEN FONDO ===== */
 .hero-bg{
   position: absolute;
   inset: 0;
@@ -22,7 +20,6 @@
   animation: heroImageZoom 7s ease-out forwards;
 }
 
-/* ===== CAPA OSCURA ===== */
 .hero::before{
   content: "";
   position: absolute;
@@ -39,7 +36,6 @@
   z-index: 1;
 }
 
-/* ===== CARD ===== */
 .hero-content{
   position: absolute;
   top: 72px;
@@ -70,7 +66,6 @@
   background: rgba(8, 16, 29, 0.46);
 }
 
-/* ===== LINEA AZUL ===== */
 .hero-content::before{
   content: "";
   position: absolute;
@@ -87,7 +82,6 @@
   animation: lineGlow 2.5s ease-in-out infinite;
 }
 
-/* ===== GLOW ===== */
 .hero-content::after{
   content: "";
   position: absolute;
@@ -97,7 +91,6 @@
   box-shadow: inset 0 0 80px rgba(51,153,255,0.08);
 }
 
-/* ===== TITULO ===== */
 .hero-content h1{
   margin: 0 0 18px;
   font-size: 62px;
@@ -108,7 +101,6 @@
   animation: heroFadeUp 0.9s ease-out 0.15s both;
 }
 
-/* ===== LABEL ===== */
 .hero-content h1::before{
   content: "SAN VICENTE AUTOMOTORES";
   display: block;
@@ -119,7 +111,6 @@
   color: rgba(255,255,255,0.55);
 }
 
-/* ===== TEXTO ===== */
 .hero-content p{
   margin: 0 0 30px;
   font-size: 18px;
@@ -128,7 +119,6 @@
   animation: heroFadeUp 0.9s ease-out 0.3s both;
 }
 
-/* ===== BOTONES ===== */
 .hero-actions{
   display: flex;
   gap: 14px;
@@ -172,7 +162,6 @@
   color: #ffffff;
 }
 
-/* ===== ANIMACIONES ===== */
 @keyframes heroCardIn{
   from{ opacity: 0; transform: translateY(18px); }
   to{ opacity: 1; transform: translateY(0); }
@@ -194,7 +183,6 @@
   100%{ opacity: 0.6; }
 }
 
-/* ===== MOBILE (ARREGLADO) ===== */
 @media (max-width: 768px){
   .hero{
     height: 320px;

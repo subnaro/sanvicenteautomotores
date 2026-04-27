@@ -1,15 +1,9 @@
-/* =========================
-   RESET
-========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   VARIABLES
-========================= */
 :root {
   --bg: #f7f7f7;
   --white: #ffffff;
@@ -33,9 +27,6 @@
   --container: 1160px;
 }
 
-/* =========================
-   BASE
-========================= */
 html {
   scroll-behavior: smooth;
 }
@@ -57,18 +48,12 @@ a {
   color: inherit;
 }
 
-/* =========================
-   WRAPPER
-========================= */
 .site-wrapper {
   width: 100%;
   min-height: 100vh;
   background: var(--white);
 }
 
-/* =========================
-   CONTAINER
-========================= */
 .container {
   width: min(var(--container), calc(100% - 56px));
   margin: 0 auto;
