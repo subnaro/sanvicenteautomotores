@@ -15,23 +15,20 @@
   text-decoration: none;
 }
 
-/* Hover */
 .whatsapp-float:hover{
   transform: scale(1.05);
   box-shadow: 0 14px 30px rgba(0,0,0,0.3);
 }
 
-/* ICONO (corregido) */
 .whatsapp-icon{
   width: 26px;
   height: 26px;
   fill: white;
   display: block;
   flex-shrink: 0;
-  transform: translateY(1px); /* ajuste fino */
+  transform: translateY(1px); 
 }
 
-/* TEXTO */
 .whatsapp-float::after{
   content: "Escribinos";
   color: white;
@@ -40,7 +37,6 @@
   white-space: nowrap;
 }
 
-/* Animación suave */
 .whatsapp-float{
   animation: pulse 2.5s infinite;
 }
@@ -51,7 +47,6 @@
   100%{ transform: scale(1); }
 }
 
-/* Mobile */
 @media (max-width: 768px){
   .whatsapp-float{
     width: 56px;
